@@ -8,7 +8,7 @@ const valueAdd = document.querySelector(".value-add");
 const valueRect = valueAdd.getBoundingClientRect();
 const letterOffsets = letters.map((letter) => letter.offsetLeft);
 
-const manrWidth = 150;
+const manWidth = 150;
 const endX = window.innerWidth - manWidth;
 
 gsap.to(man, {

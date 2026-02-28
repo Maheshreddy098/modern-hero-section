@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const car = document.getElementById("car");
+const car = document.getElementById("man");
 const trail = document.getElementById("trail");
 const letters = gsap.utils.toArray(".value-letter");
 const valueAdd = document.querySelector(".value-add");
@@ -8,10 +8,10 @@ const valueAdd = document.querySelector(".value-add");
 const valueRect = valueAdd.getBoundingClientRect();
 const letterOffsets = letters.map((letter) => letter.offsetLeft);
 
-const carWidth = 150;
-const endX = window.innerWidth - carWidth;
+const manrWidth = 150;
+const endX = window.innerWidth - manWidth;
 
-gsap.to(car, {
+gsap.to(man, {
   scrollTrigger: {
     trigger: ".section",
     start: "top top",
@@ -22,12 +22,12 @@ gsap.to(car, {
   x: endX,
   ease: "none",
   onUpdate: function () {
-    const carX = gsap.getProperty(car, "x") + carWidth / 2;
+    const manX = gsap.getProperty(man, "x") + manWidth / 2;
     letters.forEach((letter, i) => {
       const letterX = valueRect.left + letterOffsets[i];
-      letter.style.opacity = carX >= letterX ? 1 : 0;
+      letter.style.opacity = manX >= letterX ? 1 : 0;
     });
-    gsap.set(trail, { width: carX });
+    gsap.set(trail, { width: manX });
   },
 });
 

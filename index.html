@@ -1,20 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Modern Hero Section</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scroll-Driven Hero Section Animation</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Modern Hero Section</h1>
-    </header>
-    <div class="hero">
-        <img id="man" class="man" src="man.png" alt="Man Image">
+  <!-- Hero Scroll Section -->
+  <div class="section">
+    <div class="track">
+      <div class="road" id="road">
+        <img src="person.png" alt="man" class="man" id="man" />
+        <div class="trail" id="trail"></div>
+        <div class="value-add" id="valueText">
+          <span class="value-letter">W</span>
+          <span class="value-letter">E</span>
+          <span class="value-letter">L</span>
+          <span class="value-letter">C</span>
+          <span class="value-letter">O</span>
+          <span class="value-letter">M</span>
+          <span class="value-letter">E</span>
+          <span class="value-letter">&nbsp;</span>
+          <span class="value-letter">I</span>
+          <span class="value-letter">T</span>
+          <span class="value-letter">Z</span>
+          <span class="value-letter">F</span>
+          <span class="value-letter">I</span>
+          <span class="value-letter">Z</span>
+          <span class="value-letter">Z</span>
+        </div>
+      </div>
+      <div class="text-box" id="box1" style="top: 5%; right: 70%">
+        <span class="num-box">65%</span> Faster delivery completion rates
+      </div>
+      <div class="text-box" id="box2" style="bottom: 5%; right: 45%">
+        <span class="num-box">42%</span> Higher repeat customer purchases
+      </div>
+      <div class="text-box" id="box3" style="top: 5%; right: 25%">
+        <span class="num-box">38%</span> Lower operational costs
+      </div>
+      <div class="text-box" id="box4" style="bottom: 5%; right: 2%">
+        <span class="num-box">55%</span> Stronger employee productivity
+      </div>
     </div>
-    <footer>
-        <p>Created by Maheshreddy098</p>
-    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

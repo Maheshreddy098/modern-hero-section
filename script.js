@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const car = document.getElementById("man");
+const man = document.getElementById("man");
 const trail = document.getElementById("trail");
 const letters = gsap.utils.toArray(".value-letter");
 const valueAdd = document.querySelector(".value-add");
